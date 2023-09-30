@@ -27,3 +27,9 @@ app.get('/test', (req, res, next) => {
     succuss: 'true',
   });
 });
+
+app.all('*', (req, res, next) => {
+  const error = new Error(`Router ${req.originalUrl} not found`);
+  error.statusCode = 400;
+  next(error);
+});

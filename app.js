@@ -7,6 +7,7 @@ export const app = express();
 // ^ 03
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import errorMiddleware from './middleware/error.js';
 
 app.use(
   express.json({
@@ -33,3 +34,6 @@ app.all('*', (req, res, next) => {
   error.statusCode = 400;
   next(error);
 });
+
+// ^ 10
+app.use(errorMiddleware);

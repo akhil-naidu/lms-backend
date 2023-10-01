@@ -1,5 +1,3 @@
-// ^ 08 Let's use a class based Error handling
-
 class ErrorHandler extends Error {
   /**
    *

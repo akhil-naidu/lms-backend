@@ -1,7 +1,7 @@
-// ^ 07 At this stage we will not connect it to the redis dB
 import 'dotenv/config';
 import Redis from 'ioredis';
 
+/** @type {string} Enter your Redis URL*/
 const redisURL = process.env.REDIS_URL;
 
 const redis = () => {

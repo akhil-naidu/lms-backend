@@ -1,7 +1,7 @@
-// ^ 04
 import 'dotenv/config';
 import mongoose from 'mongoose';
 
+/** @type {string} Enter your MongoDB URL*/
 const dbURL = process.env.MONGO_URL;
 
 const connectDB = async () => {

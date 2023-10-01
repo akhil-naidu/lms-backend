@@ -1,4 +1,4 @@
-// ^09
+// import ErrorHandler from '../utils/ErrorHandler';
 import ErrorHandler from '../utils/ErrorHandler.js';
 
 const errorMiddleware = (error, req, res, next) => {

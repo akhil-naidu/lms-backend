@@ -6,6 +6,7 @@ export const app = express();
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import errorMiddleware from './middleware/error.js';
+import userRouter from './routes/user.route.js';
 
 app.use(
   express.json({
@@ -20,6 +21,8 @@ app.use(
     origin: process.env.ORIGIN,
   }),
 );
+
+app.use('/api/v1', userRouter);
 
 app.get('/test', (req, res, next) => {
   res.status(200).send({

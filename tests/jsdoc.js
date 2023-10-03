@@ -1,4 +1,4 @@
-/**@type {User} */
+/**@type {import("../types/user.type.js").User} */
 const akhil = {
   name: '',
   email: '',
